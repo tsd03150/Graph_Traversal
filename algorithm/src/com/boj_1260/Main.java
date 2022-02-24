@@ -1,8 +1,8 @@
-package com.kaveloper.algorithm;
+package com.boj_1260;
 
 import java.util.*;
 
-class Main_1260 {
+class Main {
     static int n;
     static int m;
     static ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
@@ -42,7 +42,7 @@ class Main_1260 {
     }
 
     public static void main(String[] args) {
-        Main_1260 T = new Main_1260();
+        Main T = new Main();
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
         m = kb.nextInt();

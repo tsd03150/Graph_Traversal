@@ -1,8 +1,8 @@
-package com.kaveloper.algorithm;
+package com.boj_2178;
 
 import java.util.Scanner;
 
-class Main_2178_DFS {
+class Main_DFS {
     static int n;
     static int m;
     static int[][] ch;
@@ -34,7 +34,7 @@ class Main_2178_DFS {
     }
 
     public static void main(String[] args) {
-        Main_2178_DFS T = new Main_2178_DFS();
+        Main_DFS T = new Main_DFS();
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
         m = kb.nextInt();

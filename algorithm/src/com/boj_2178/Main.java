@@ -1,4 +1,4 @@
-package com.kaveloper.algorithm;
+package com.boj_2178;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,7 +14,7 @@ class Graph {
     }
 }
 
-class Main_2178 {
+class Main {
     static int n;
     static int m;
     static char[][] board;
@@ -52,7 +52,7 @@ class Main_2178 {
     }
 
     public static void main(String[] args) {
-        Main_2178 T = new Main_2178();
+        Main T = new Main();
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
         m = kb.nextInt();
