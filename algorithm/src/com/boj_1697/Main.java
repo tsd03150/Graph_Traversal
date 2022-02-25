@@ -51,7 +51,6 @@ class Main {
         } else {
             T.BFS(0, n);
         }
-
         System.out.println(answer);
     }
 }
