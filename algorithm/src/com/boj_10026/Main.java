@@ -60,7 +60,6 @@ class Main {
                 }
             }
         }
-
         System.out.println(answer + " " + T.solution());
     }
 }
