@@ -18,7 +18,7 @@ class Main {
     static int n;
     static int m;
     static int[][] board;
-    static int[] ch;
+    static Graph[] ch;
     static ArrayList<Graph> arr;
     static int[] dx = {-1, 1, 0, 0};
     static int[] dy = {0, 0, -1, 1};
@@ -29,11 +29,8 @@ class Main {
             BFS();
         } else {
             for (int i = v; i < arr.size(); i++) {
-                if (ch[i] == 0) {
-                    ch[i] = 1;
-                    DFS(L + 1, i + 1);
-                    ch[i] = 0;
-                }
+                ch[L] = arr.get(i);
+                DFS(L + 1, i + 1);
             }
         }
     }
@@ -49,12 +46,9 @@ class Main {
         Queue<Graph> Q = new LinkedList<>();
         int[][] visit = new int[n][n];
         int[][] po = new int[n][n];
-        for (int i = 0; i < ch.length; i++) {
-            Graph tmp = arr.get(i);
-            if (ch[i] == 1) {
-                Q.offer(tmp);
-                visit[tmp.x][tmp.y] = 1;
-            }
+        for (int i = 0; i < m; i++) {
+            Q.offer(ch[i]);
+            visit[ch[i].x][ch[i].y] = 1;
         }
 
         while (!Q.isEmpty()) {
@@ -110,7 +104,7 @@ class Main {
         if (znt == 0) {
             answer = 0;
         } else {
-            ch = new int[arr.size()];
+            ch = new Graph[m];
             T.DFS(0, 0);
             if (answer == Integer.MAX_VALUE) {
                 answer = -1;
